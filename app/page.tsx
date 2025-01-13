@@ -2,29 +2,6 @@
 import { useEffect, useState } from "react";
 import { Ordiscan, Inscription } from "ordiscan";
 
-// interface Inscription {
-//   id: string;
-//   number: number;
-//   content: string;
-//   content_type: string;
-//   owner_address: string;
-//   owner_output: string;
-//   genesis_address: string;
-//   genesis_output: string;
-//   timestamp: string;
-//   content_url: string;
-//   collection_slug: string | null;
-//   sat: number;
-//   satributes: string[];
-//   metadata: Record<string, any> | null;
-//   metaprotocol: string | null;
-//   parent_inscription_id: string | null;
-//   delegate_inscription_id: string | null;
-//   submodules: string[];
-//   sats_name: string | null;
-//   brc20_action: Record<string, any> | null;
-// }
-
 export default function Home() {
   const [inscriptions, setInscriptions] = useState<Inscription[]>([]);
   const [isLoading, setIsLoading] = useState(true);
@@ -59,7 +36,7 @@ export default function Home() {
       <div className="grid grid-cols-3 gap-4 w-full max-w-6xl">
         {inscriptions.map(
           (inscription) =>
-            inscription.content_type === "text/plain;charset=utf-8" && (
+            inscription.content_type == "text/plain;charset=utf-8" && (
               <div
                 key={inscription.inscription_id}
                 className="p-4 border rounded-lg"
