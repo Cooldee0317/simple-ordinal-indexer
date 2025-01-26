@@ -6,7 +6,7 @@ export async function GET() {
       "https://api.ordinals.com/inscriptions",
       {
         headers: {
-          Authorization: "Bearer ab6ce104-831c-457d-a2eb-471463991f3e",
+          Authorization: "",
         },
       }
     );
